@@ -1,0 +1,198 @@
+html {
+  height: 100%;
+  width: 100%;
+  background: url(../../app/img/fon.png) no-repeat fixed;
+  background-size: cover;
+}
+
+body {
+  background: inherit;
+  color: white;
+}
+
+input {
+  text-align: center;
+  color: white;
+}
+
+input::-webkit-input-placeholder {
+  color: azure;
+  opacity: 1;
+}
+
+a {
+  color: white;
+}
+
+.return:before {
+  content: '';
+  position: relative;
+  background-size: cover;
+  background-image: url(../img/left.png);
+  width: 17px;
+  float: left;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.radius {
+  width: 70px;
+  height: 70px;
+  background: lightcoral;
+  border-radius: 50%;
+  margin: auto;
+  overflow: hidden;
+  img {
+    width: 300px;
+    height: 180px;
+    margin: -113px;
+    border-radius: 100%;
+    margin-top: -55px;
+  }
+}
+
+.form-input {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  height: 35px;
+  border-radius: 20px;
+  background: inherit;
+  border: 1px solid white;
+}
+
+.form-container * {
+  position: relative;
+}
+
+.form-container {
+  background: inherit;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  max-width: 480px;
+  height: 360px;
+  min-width: 320px;
+
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 1000px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 25px;
+  @media screen and (max-width: 362px){
+    padding: 12px;
+  }
+}
+
+.form-container:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 480px;
+  height: 360px;
+  background: inherit;
+  filter: blur(4px);
+}
+
+svg {
+  height: 0;
+  width: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+.inputs-container {
+  height: 170px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.radio {
+  float: left;
+  margin-left: 20px;
+  width: 50px;
+  height: 26px;
+  background: inherit;
+  position: relative;
+  border: 1px solid white;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  label {
+    display: block;
+    width: 37px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    z-index: 1;
+    background: aliceblue;
+    opacity: 0.4;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.radio input[type=checkbox] {
+  visibility: hidden;
+}
+
+.radio input[type=checkbox]:checked + label {
+  left: 10px;
+  background: white;
+  opacity: 1;
+}
+
+.forget-password {
+  float: right;
+  height: 26px;
+  margin-right: 20px;
+  margin-top: 3px;
+}
+
+@media screen and (max-width: 362px){
+  .forget-password {
+    width: 50px;
+  }
+}
+
+#forgotten {
+  float: right;
+  color: white;
+}
+
+.entrance {
+  display: block;
+  /* text-align: center; */
+  width: 130px;
+  height: 40px;
+  margin: auto;
+
+  @media screen and (max-width: 362px){
+    margin-top: 10px;
+  }
+}
+
+.btn {
+  position: absolute;
+  background: inherit;
+  align-items: center;
+  justify-content: center;
+  padding-right: 50px;
+  padding-left: 50px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid white;
+  color: white;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+

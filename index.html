@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="app/css/style.css">
+</head>
+<body>
+
+<form class="form-container" method="post" name="auth">
+
+    <a class="return" href="#">Вернуться</a>
+    <figure class="radius">
+        <img src="app/img/rabbit1.png">
+    </figure>
+    <div class="inputs-container">
+            <input id="number" class="form-input" type="text" placeholder="номер телефона" autocomplete="off">
+            <input id="password" class="form-input" type="password" placeholder="Пароль" autocomplete="off">
+
+            <div class="remember">
+                <div class="radio">
+                    <input type="checkbox" value="None" id="radio" name="check">
+                    <label for="radio"></label>
+                </div>
+                <span style="position: absolute;
+    margin-left: 5px;
+    margin-top: 3px;">Запомнить</span>
+            </div>
+
+            <div class="forget-password">
+                <a id="forgotten" href="#">Забыл пароль</a>
+            </div>
+        </div>
+        <div class="entrance">
+            <button id="enter" class="btn">войти</button>
+        </div>
+    </div>
+</form>
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <filter id="blur">
+        <feGaussianBlur stdDeviation="6"></feGaussianBlur>
+    </filter>
+</svg>
+
+<script src="app/js/app.js"></script>
+</body>
+</html>

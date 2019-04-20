@@ -1,0 +1,15 @@
+{
+  "name": "myproject",
+  "version": "2.1.0",
+  "description": "my first gulp project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "coolhacker",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
