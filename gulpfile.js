@@ -11,3 +11,7 @@ gulp.task('watch', function(){
     gulp.watch('app/scss/*.scss', gulp.series('sass'));
     // другие ресурсы
 });
+
+gulp.task('JS', function(){
+    gulp.watch('app/js/*.js', ['uglify']);
+});

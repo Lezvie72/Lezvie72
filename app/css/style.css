@@ -1,7 +1,7 @@
 html {
   height: 100%;
   width: 100%;
-  background: url(../../app/img/fon.png) no-repeat fixed;
+  background: url(../../app/img/fon.png) no-repeat fixed center;
   background-size: cover; }
 
 body {
@@ -164,6 +164,4 @@ svg {
   height: 40px;
   border-radius: 20px;
   border: 1px solid white;
-  color: white;
-  pointer-events: none;
-  opacity: 0.3; }
+  color: white; }

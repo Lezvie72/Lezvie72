@@ -36,6 +36,8 @@ function checkFields() {
 
 function disabledBtn() {
     enterBtn.disabled = true;
+    enterBtn.style.opacity = "0.3";
+    enterBtn.style.pointerEvents = "none";
 }
 
 function changeBackground(event) {
