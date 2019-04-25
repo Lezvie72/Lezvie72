@@ -53,7 +53,50 @@ function returnBackground(event) {
     checkFields()
 }
 
+phoneInput.addEventListener('keydown', function (event) {
+        var currentString = phoneInput.value;
+        var currentLength = currentString.length;
+        if (!(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Tab')) {
+            if (currentLength === 0) {
+                currentString = '';
+                this.value = currentString + '8 (';
+            }
 
+            if (currentLength === 1) {
+                this.value = currentString + ' (';
+            }
+
+            if (currentLength === 2) {
+                this.value = currentString + '(';
+            }
+
+            if (this.value.length === 6) {
+                this.value = currentString + ') '
+            }
+
+            if (this.value.length === 7) {
+                this.value = currentString + ' '
+            }
+
+            if (this.value.length === 8 && currentString.charAt(7) == ' ') {
+                currentString.replace(currentString.charAt(8), '')
+            }
+
+            if (this.value.length === 11 || this.value.length === 14) {
+                this.value = currentString + '-'
+            }
+        }
+    }
+);
+
+function sendData() {
+    var formData = new FormData(document.forms.auth);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/url");
+    xhr.send(formData);
+}
+
+/*
 phoneInput.addEventListener('keydown', function (event) {
     if (!(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Tab')) {
         event.preventDefault()
@@ -77,13 +120,4 @@ phoneInput.addEventListener('keydown', function (event) {
             }
         }
     }
-});
-
-function sendData() {
-    var formData = new FormData(document.forms.auth);
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/url");
-    xhr.send(formData);
-}
-
-
+});*/
