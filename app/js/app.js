@@ -20,10 +20,22 @@ function eventListiners() {
 
 //functions
 
+function checkLettars() {
+    function isNumeric( value ) {
+        return (/\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}/).test( value );
+    }
+
+    if( !isNumeric(phoneInput.value) ) {
+       return false;
+    } else {
+        return true;
+    }
+}
+
 function checkFields() {
     let phoneInputValue = phoneInput.value;
     let passwordValue = password.value.length;
-    if (phoneInputValue === '' || passwordValue < 5 || phoneInputValue.length < 18) {
+    if (phoneInputValue === '' || passwordValue < 5 || phoneInputValue.length < 17 || checkLettars() == false) {
         enterBtn.disabled = true;
         enterBtn.style.opacity = "0.3";
         enterBtn.style.pointerEvents = "none"
@@ -76,10 +88,6 @@ phoneInput.addEventListener('keydown', function (event) {
 
             if (this.value.length === 7) {
                 this.value = currentString + ' '
-            }
-
-            if (this.value.length === 8 && currentString.charAt(7) == ' ') {
-                currentString.replace(currentString.charAt(8), '')
             }
 
             if (this.value.length === 11 || this.value.length === 14) {
