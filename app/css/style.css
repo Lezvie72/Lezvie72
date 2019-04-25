@@ -81,7 +81,8 @@ a {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  width: 480px;
+  max-width: 480px;
+  min-width: 320px;
   height: 360px;
   background: inherit;
   filter: blur(4px); }
